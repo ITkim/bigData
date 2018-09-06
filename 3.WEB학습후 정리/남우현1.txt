@@ -1,0 +1,17 @@
+오늘한 거 ??? 이런 구어체는 우현 문서에는 부적합 ???!!!
+
+1. step2 : pagemove
+    1. action -> cont (post로)
+    2. request, response
+    3. setAttribute -> map
+    4. redirect로 보내면 공유가 안되서 안나옴
+    5. newData를 입력하면 요청에 새로운 데이터 저장이 출력됨
+2. step3: cookies
+    1. forward는 전부 수행 되어야 브라우저로 돌아가서 쿠키가 생성되나
+    2. redirect는 success나 fail을 만나면 우선 브라우저로 돌아가 쿠키가 생성되고 후에 브라우저에 response를 한다.
+3. 쿠키는 객체를 만들때 마다 하나씩이지만 세션은 클라이언트마다 하나씩  배정
+HttpSession session = request.getSession(); ?> 세션 객체 생성
+	session.setAttribute("name", "코난");
+?> 세션에 이름 저장
+각 유저는 아이디를 부여받고 aws의 세션과 각각 연결된다.
+invalidate - 아이디와 세션의 연결 해제
